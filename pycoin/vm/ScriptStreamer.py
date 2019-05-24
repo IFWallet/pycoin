@@ -152,8 +152,8 @@ class ScriptStreamer(object):
 
     def compile_push_data(self, data):
         # return bytes that causes the given data to be pushed onto the stack
-        if data in self.const_encoder:
-            return self.const_encoder.get(data)
+        # if data in self.const_encoder:
+        #     return self.const_encoder.get(data)
         size = len(data)
         if size in self.sized_encoder:
             return self.sized_encoder.get(size)(data)
